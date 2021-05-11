@@ -136,26 +136,6 @@ function dajSliku($redatelj){
 	return $wikirezultat;
 }
 
-//vrati koordinate mjesta rodenja s wikipedije(1)
-/*!!!!! LAB4 NAPOMENA: Wikimedia REST API ne prikazuje koordinate za Wiki stranice ljudi. Zato za prikaz koordinata redateljevog mjesta rodenja
-		pomocu Wikimedia REST API-ja koristim Wiki stranicu njegovog/njenog rodnog mjesta. Postupak s podacima iz API-ja je jednak.
-		Zbog toga postoji element wikimjesto s wiki handle-om mjesta. Isti je kao element mjestorod, samo sa engleskim nazivom, pa nema
-		dodatne pretrage po njemu. */
-function dajKoordinate1($mjesto){
-	//Wikimedia REST API
-	$zahtjev = "https://en.wikipedia.org/api/rest_v1/page/summary/".($mjesto->getElementsByTagName('wikimjesto')->item(0)->nodeValue);
-	if ($jsonfile = file_get_contents($zahtjev)){
-		$wikirezultat = json_decode($jsonfile,true);
-		$koordinate="";
-		$wikirezultat=$wikirezultat["coordinates"];
-		$koordinate .= number_format($wikirezultat["lat"],2);
-		$koordinate .= ", ";
-		$koordinate .= number_format($wikirezultat["lon"],2);
-	}
-	else
-		$koordinate="Nije pronađeno.";
-	return $koordinate;
-}
 
 //vrati sazetak s wikipedije
 function dajSazetak($redatelj){
