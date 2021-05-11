@@ -53,8 +53,7 @@ $result = $xpath->query($filter);
 				<th>Slika</th>
 				<th>Sažetak</th>
 				<th>Rodno mjesto</th>
-				<th>Koordinate 1</th>
-				<th>Koordinate 2</th>
+				<th>Koordinate</th>
 				<th>Ime filma</th>
 				
 			</tr>
@@ -79,9 +78,6 @@ $result = $xpath->query($filter);
 					echo $adr;
 					echo "</td><td>";
 					
-					echo dajKoordinate1($node);
-					echo "</td><td>";
-					
 					echo dajKoordinate2($adr);
 					echo "</td><td>";
 					
@@ -92,7 +88,7 @@ $result = $xpath->query($filter);
 					//ako ima jos jedan film
 					
 					if (count($film) == 2){
-						echo "<tr><td></td><td></td><td></td><td></td><td></td><td></td><td>";
+						echo "<tr><td></td><td></td><td></td><td></td><td></td><td>";
 						echo ($film->item(1)->getElementsByTagName('naslov')->item(0)->getElementsByTagName('hrnaslov')->item(0)->nodeValue);
 						
 						echo "</td></tr>";
