@@ -1,10 +1,14 @@
 mat-card {
-  margin: 64px;
-  padding: 32px;
+  margin: 88px;
+  padding: 52px;
 }
 
 mat-expansion-panel-header {
-  height: 59px;
+  height: 72px;
+  font-size: 16px;
+}
+.main-panel-header {
+  font-weight: 500;
 }
 
 table {
