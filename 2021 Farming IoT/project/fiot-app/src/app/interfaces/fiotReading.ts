@@ -11,6 +11,7 @@ export interface fiotReading {
     field4:string,
     field5:string,
     field6:string,
+    field7:string,
     created_at:string,
     updated_at:string,
     last_entry_id:string,
@@ -25,6 +26,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     1:{
       created_at:string,
@@ -35,6 +37,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     2:{
       created_at:string,
@@ -45,6 +48,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     3:{
       created_at:string,
@@ -55,6 +59,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     4:{
       created_at:string,
@@ -65,6 +70,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     5:{
       created_at:string,
@@ -75,6 +81,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     6:{
       created_at:string,
@@ -85,6 +92,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     7:{
       created_at:string,
@@ -95,6 +103,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     8:{
       created_at:string,
@@ -105,6 +114,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
     9:{
       created_at:string,
@@ -115,17 +125,7 @@ export interface fiotReading {
       field4:string,
       field5:string,
       field6:string,
+      field7:string,
     }
   }
 }
-
-/*
-export interface fiotReading {
-  temperature_value:number,
-  humidity_value:number,
-  pressure_value:number,
-  leaf_wetness_value:number,
-  soil_moisture_value:number,
-  soil_temperature_value:number,
-}
- */

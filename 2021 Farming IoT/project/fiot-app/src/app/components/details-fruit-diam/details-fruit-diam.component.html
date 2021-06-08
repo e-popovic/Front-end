@@ -1,0 +1,36 @@
+<mat-card *ngIf="reading">
+
+  <mat-card-header>
+    <mat-card-title>Fruit Diameter - {{reading.channel.name}}</mat-card-title>
+  </mat-card-header>
+  <ul>
+    <li>{{reading.channel.description}}</li>
+  </ul>
+  <table>
+    <tr>
+      <th>{{getTime(reading.feeds["0"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["1"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["2"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["3"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["4"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["5"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["6"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["7"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["8"].created_at)}}</th>
+      <th>{{getTime(reading.feeds["9"].created_at)}}</th>
+    </tr>
+    <tr>
+      <td>{{reading.feeds["0"].field7}}</td>
+      <td>{{reading.feeds["1"].field7}}</td>
+      <td>{{reading.feeds["2"].field7}}</td>
+      <td>{{reading.feeds["3"].field7}}</td>
+      <td>{{reading.feeds["4"].field7}}</td>
+      <td>{{reading.feeds["5"].field7}}</td>
+      <td>{{reading.feeds["6"].field7}}</td>
+      <td>{{reading.feeds["7"].field7}}</td>
+      <td>{{reading.feeds["8"].field7}}</td>
+      <td>{{reading.feeds["9"].field7}}</td>
+    </tr>
+  </table>
+
+</mat-card>

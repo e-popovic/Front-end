@@ -1,0 +1,38 @@
+<mat-card *ngIf="reading">
+
+  <mat-card-header>
+    <mat-card-title>{{reading.channel.name}}: Humidity (%)</mat-card-title>
+  </mat-card-header>
+  <ul>
+    <li>{{reading.channel.description}}</li>
+    <li>Normal value interval: 40 - 50 %</li>
+  </ul>
+
+      <table>
+        <tr>
+          <th>{{getTime(reading.feeds["0"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["1"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["2"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["3"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["4"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["5"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["6"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["7"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["8"].created_at)}}</th>
+          <th>{{getTime(reading.feeds["9"].created_at)}}</th>
+        </tr>
+        <tr>
+          <td [ngStyle]="{'color':getColor(reading.feeds['0'].field2)}">{{reading.feeds["0"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['1'].field2)}">{{reading.feeds["1"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['2'].field2)}">{{reading.feeds["2"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['3'].field2)}">{{reading.feeds["3"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['4'].field2)}">{{reading.feeds["4"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['5'].field2)}">{{reading.feeds["5"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['6'].field2)}">{{reading.feeds["6"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['7'].field2)}">{{reading.feeds["7"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['8'].field2)}">{{reading.feeds["8"].field2}}</td>
+          <td [ngStyle]="{'color':getColor(reading.feeds['9'].field2)}">{{reading.feeds["9"].field2}}</td>
+        </tr>
+      </table>
+
+</mat-card>
