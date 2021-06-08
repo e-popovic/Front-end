@@ -3,487 +3,68 @@
     <mat-card-title>My sensors</mat-card-title>
   </mat-card-header>
 
+  <mat-accordion *ngIf="readingReal">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="main-panel-header">
+          Real Board
+          <mat-icon color="warn" [ngStyle]="{'display':getWarningDisplay(problemReal)}">warning</mat-icon>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <mat-chip-list aria-label="Real board sensors">
+        <a routerLink="/{{readingReal.channel.id}}/air-temperature"><mat-chip [color]="getChipColorReal(20,24, 1)" selected>Air Temperature</mat-chip></a>
+        <a routerLink="/{{readingReal.channel.id}}/humidity"><mat-chip [color]="getChipColorReal(40,50, 2)" selected>Humidity</mat-chip></a>
+        <a routerLink="/{{readingReal.channel.id}}/pressure"><mat-chip [color]="getChipColorReal(100000,101325, 3)" selected>Air Pressure</mat-chip></a>
+        <a routerLink="/{{readingReal.channel.id}}/leaf-wetness"><mat-chip [color]="getChipColorReal(0,2.5, 4)" selected>Leaf Wetness</mat-chip></a>
+        <a routerLink="/{{readingReal.channel.id}}/soil-moisture"><mat-chip [color]="getChipColorReal(10,30, 5)" selected>Soil Moisture</mat-chip></a>
+        <a routerLink="/{{readingReal.channel.id}}/soil-temperature"><mat-chip [color]="getChipColorReal(18,24, 6)" selected>Soil Temperature</mat-chip></a>
+        <a routerLink="/{{readingReal.channel.id}}/fruit-diameter"><mat-chip>Fruit Diameter</mat-chip></a>
+      </mat-chip-list>
+    </mat-expansion-panel>
+  </mat-accordion>
+
   <mat-accordion *ngIf="reading1">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        <mat-panel-title class="main-panel-header">Simulated Board 1</mat-panel-title>
+        <mat-panel-title class="main-panel-header">
+          Simulated Board 1
+          <mat-icon color="warn" [ngStyle]="{'display':getWarningDisplay(problem1)}">warning</mat-icon>
+        </mat-panel-title>
       </mat-expansion-panel-header>
 
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Air Temperature
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading1.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading1.feeds["0"].field1}}</td>
-              <td>{{reading1.feeds["1"].field1}}</td>
-              <td>{{reading1.feeds["2"].field1}}</td>
-              <td>{{reading1.feeds["3"].field1}}</td>
-              <td>{{reading1.feeds["4"].field1}}</td>
-              <td>{{reading1.feeds["5"].field1}}</td>
-              <td>{{reading1.feeds["6"].field1}}</td>
-              <td>{{reading1.feeds["7"].field1}}</td>
-              <td>{{reading1.feeds["8"].field1}}</td>
-              <td>{{reading1.feeds["9"].field1}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
+      <mat-chip-list aria-label="Simulated board 1 sensors">
+        <a routerLink="/{{reading1.channel.id}}/air-temperature"><mat-chip [color]="getChipColor(20,24, 1, reading1)" selected>Air Temperature</mat-chip></a>
+        <a routerLink="/{{reading1.channel.id}}/humidity"><mat-chip [color]="getChipColor(40,50, 2, reading1)" selected>Humidity</mat-chip></a>
+        <a routerLink="/{{reading1.channel.id}}/pressure"><mat-chip [color]="getChipColor(100000,101325, 3, reading1)" selected>Air Pressure</mat-chip></a>
+        <a routerLink="/{{reading1.channel.id}}/leaf-wetness"><mat-chip [color]="getChipColor(0,2.5, 4, reading1)" selected>Leaf Wetness</mat-chip></a>
+        <a routerLink="/{{reading1.channel.id}}/soil-moisture"><mat-chip [color]="getChipColor(10,30, 5, reading1)" selected>Soil Moisture</mat-chip></a>
+        <a routerLink="/{{reading1.channel.id}}/soil-temperature"><mat-chip [color]="getChipColor(18,24, 6, reading1)" selected>Soil Temperature</mat-chip></a>
+        <a routerLink="/{{reading1.channel.id}}/fruit-diameter"><mat-chip>Fruit Diameter</mat-chip></a>
+      </mat-chip-list>
 
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Humidity
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading1.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading1.feeds["0"].field2}}</td>
-              <td>{{reading1.feeds["1"].field2}}</td>
-              <td>{{reading1.feeds["2"].field2}}</td>
-              <td>{{reading1.feeds["3"].field2}}</td>
-              <td>{{reading1.feeds["4"].field2}}</td>
-              <td>{{reading1.feeds["5"].field2}}</td>
-              <td>{{reading1.feeds["6"].field2}}</td>
-              <td>{{reading1.feeds["7"].field2}}</td>
-              <td>{{reading1.feeds["8"].field2}}</td>
-              <td>{{reading1.feeds["9"].field2}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Air Pressure
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading1.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading1.feeds["0"].field3}}</td>
-              <td>{{reading1.feeds["1"].field3}}</td>
-              <td>{{reading1.feeds["2"].field3}}</td>
-              <td>{{reading1.feeds["3"].field3}}</td>
-              <td>{{reading1.feeds["4"].field3}}</td>
-              <td>{{reading1.feeds["5"].field3}}</td>
-              <td>{{reading1.feeds["6"].field3}}</td>
-              <td>{{reading1.feeds["7"].field3}}</td>
-              <td>{{reading1.feeds["8"].field3}}</td>
-              <td>{{reading1.feeds["9"].field3}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Leaf Wetness
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading1.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading1.feeds["0"].field4}}</td>
-              <td>{{reading1.feeds["1"].field4}}</td>
-              <td>{{reading1.feeds["2"].field4}}</td>
-              <td>{{reading1.feeds["3"].field4}}</td>
-              <td>{{reading1.feeds["4"].field4}}</td>
-              <td>{{reading1.feeds["5"].field4}}</td>
-              <td>{{reading1.feeds["6"].field4}}</td>
-              <td>{{reading1.feeds["7"].field4}}</td>
-              <td>{{reading1.feeds["8"].field4}}</td>
-              <td>{{reading1.feeds["9"].field4}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Soil Moisture
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading1.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading1.feeds["0"].field5}}</td>
-              <td>{{reading1.feeds["1"].field5}}</td>
-              <td>{{reading1.feeds["2"].field5}}</td>
-              <td>{{reading1.feeds["3"].field5}}</td>
-              <td>{{reading1.feeds["4"].field5}}</td>
-              <td>{{reading1.feeds["5"].field5}}</td>
-              <td>{{reading1.feeds["6"].field5}}</td>
-              <td>{{reading1.feeds["7"].field5}}</td>
-              <td>{{reading1.feeds["8"].field5}}</td>
-              <td>{{reading1.feeds["9"].field5}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Soil Temperature
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading1.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading1.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading1.feeds["0"].field6}}</td>
-              <td>{{reading1.feeds["1"].field6}}</td>
-              <td>{{reading1.feeds["2"].field6}}</td>
-              <td>{{reading1.feeds["3"].field6}}</td>
-              <td>{{reading1.feeds["4"].field6}}</td>
-              <td>{{reading1.feeds["5"].field6}}</td>
-              <td>{{reading1.feeds["6"].field6}}</td>
-              <td>{{reading1.feeds["7"].field6}}</td>
-              <td>{{reading1.feeds["8"].field6}}</td>
-              <td>{{reading1.feeds["9"].field6}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
     </mat-expansion-panel>
   </mat-accordion>
 
   <mat-accordion *ngIf="reading2">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
-        <mat-panel-title class="main-panel-header">Simulated Board 2</mat-panel-title>
+        <mat-panel-title class="main-panel-header">
+          Simulated Board 2
+          <mat-icon color="warn" [ngStyle]="{'display':getWarningDisplay(problem2)}">warning</mat-icon>
+        </mat-panel-title>
       </mat-expansion-panel-header>
 
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Air Temperature
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading2.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading2.feeds["0"].field1}}</td>
-              <td>{{reading2.feeds["1"].field1}}</td>
-              <td>{{reading2.feeds["2"].field1}}</td>
-              <td>{{reading2.feeds["3"].field1}}</td>
-              <td>{{reading2.feeds["4"].field1}}</td>
-              <td>{{reading2.feeds["5"].field1}}</td>
-              <td>{{reading2.feeds["6"].field1}}</td>
-              <td>{{reading2.feeds["7"].field1}}</td>
-              <td>{{reading2.feeds["8"].field1}}</td>
-              <td>{{reading2.feeds["9"].field1}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
+      <mat-chip-list aria-label="Simulated board 2 sensors">
+        <a routerLink="/{{reading2.channel.id}}/air-temperature"><mat-chip [color]="getChipColor(20,24, 1, reading2)" selected>Air Temperature</mat-chip></a>
+        <a routerLink="/{{reading2.channel.id}}/humidity"><mat-chip [color]="getChipColor(40,50, 2, reading2)" selected>Humidity</mat-chip></a>
+        <a routerLink="/{{reading2.channel.id}}/pressure"><mat-chip [color]="getChipColor(100000,101325, 3, reading2)" selected>Air Pressure</mat-chip></a>
+        <a routerLink="/{{reading2.channel.id}}/leaf-wetness"><mat-chip [color]="getChipColor(0,2.5, 4, reading2)" selected>Leaf Wetness</mat-chip></a>
+        <a routerLink="/{{reading2.channel.id}}/soil-moisture"><mat-chip [color]="getChipColor(10,30, 5, reading2)" selected>Soil Moisture</mat-chip></a>
+        <a routerLink="/{{reading2.channel.id}}/soil-temperature"><mat-chip [color]="getChipColor(18,24, 6, reading2)" selected>Soil Temperature</mat-chip></a>
+        <a routerLink="/{{reading2.channel.id}}/fruit-diameter"><mat-chip>Fruit Diameter</mat-chip></a>
+      </mat-chip-list>
 
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Humidity
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading2.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading2.feeds["0"].field2}}</td>
-              <td>{{reading2.feeds["1"].field2}}</td>
-              <td>{{reading2.feeds["2"].field2}}</td>
-              <td>{{reading2.feeds["3"].field2}}</td>
-              <td>{{reading2.feeds["4"].field2}}</td>
-              <td>{{reading2.feeds["5"].field2}}</td>
-              <td>{{reading2.feeds["6"].field2}}</td>
-              <td>{{reading2.feeds["7"].field2}}</td>
-              <td>{{reading2.feeds["8"].field2}}</td>
-              <td>{{reading2.feeds["9"].field2}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Air Pressure
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading2.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading2.feeds["0"].field3}}</td>
-              <td>{{reading2.feeds["1"].field3}}</td>
-              <td>{{reading2.feeds["2"].field3}}</td>
-              <td>{{reading2.feeds["3"].field3}}</td>
-              <td>{{reading2.feeds["4"].field3}}</td>
-              <td>{{reading2.feeds["5"].field3}}</td>
-              <td>{{reading2.feeds["6"].field3}}</td>
-              <td>{{reading2.feeds["7"].field3}}</td>
-              <td>{{reading2.feeds["8"].field3}}</td>
-              <td>{{reading2.feeds["9"].field3}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Leaf Wetness
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading2.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading2.feeds["0"].field4}}</td>
-              <td>{{reading2.feeds["1"].field4}}</td>
-              <td>{{reading2.feeds["2"].field4}}</td>
-              <td>{{reading2.feeds["3"].field4}}</td>
-              <td>{{reading2.feeds["4"].field4}}</td>
-              <td>{{reading2.feeds["5"].field4}}</td>
-              <td>{{reading2.feeds["6"].field4}}</td>
-              <td>{{reading2.feeds["7"].field4}}</td>
-              <td>{{reading2.feeds["8"].field4}}</td>
-              <td>{{reading2.feeds["9"].field4}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Soil Moisture
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading2.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading2.feeds["0"].field5}}</td>
-              <td>{{reading2.feeds["1"].field5}}</td>
-              <td>{{reading2.feeds["2"].field5}}</td>
-              <td>{{reading2.feeds["3"].field5}}</td>
-              <td>{{reading2.feeds["4"].field5}}</td>
-              <td>{{reading2.feeds["5"].field5}}</td>
-              <td>{{reading2.feeds["6"].field5}}</td>
-              <td>{{reading2.feeds["7"].field5}}</td>
-              <td>{{reading2.feeds["8"].field5}}</td>
-              <td>{{reading2.feeds["9"].field5}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
-
-      <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Soil Temperature
-            </mat-panel-title>
-            <!--<mat-panel-description>
-              description
-            </mat-panel-description>-->
-          </mat-expansion-panel-header>
-          <table>
-            <tr>
-              <th>{{getTime(reading2.feeds["0"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["1"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["2"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["3"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["4"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["5"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["6"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["7"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["8"].created_at)}}</th>
-              <th>{{getTime(reading2.feeds["9"].created_at)}}</th>
-            </tr>
-            <tr>
-              <td>{{reading2.feeds["0"].field6}}</td>
-              <td>{{reading2.feeds["1"].field6}}</td>
-              <td>{{reading2.feeds["2"].field6}}</td>
-              <td>{{reading2.feeds["3"].field6}}</td>
-              <td>{{reading2.feeds["4"].field6}}</td>
-              <td>{{reading2.feeds["5"].field6}}</td>
-              <td>{{reading2.feeds["6"].field6}}</td>
-              <td>{{reading2.feeds["7"].field6}}</td>
-              <td>{{reading2.feeds["8"].field6}}</td>
-              <td>{{reading2.feeds["9"].field6}}</td>
-            </tr>
-          </table>
-        </mat-expansion-panel>
-      </mat-accordion>
     </mat-expansion-panel>
   </mat-accordion>
 
