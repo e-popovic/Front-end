@@ -1,0 +1,131 @@
+{
+  "channel": {
+    "id": 1402242,
+    "name": "simulated_board_1",
+    "description": "board with simulated sensors data",
+    "latitude": "46.155992",
+    "longitude": "15.844934",
+    "field1": "temperature_value",
+    "field2": "humidity_value",
+    "field3": "pressure_value",
+    "field4": "leaf_wetness_value",
+    "field5": "soil_moisture_value",
+    "field6": "soil_temperature_value",
+    "field7": "fruit_diameter",
+    "created_at": "2021-05-28T09:50:04Z",
+    "updated_at": "2021-06-08T18:05:20Z",
+    "last_entry_id": 119
+  },
+  "feeds": [
+    {
+      "created_at": "2021-06-09T08:21:50Z",
+      "entry_id": 110,
+      "field1": "16",
+      "field2": "28",
+      "field3": "100491",
+      "field4": "8",
+      "field5": "-8",
+      "field6": "14",
+      "field7": "20"
+    },
+    {
+      "created_at": "2021-06-09T08:22:06Z",
+      "entry_id": 111,
+      "field1": "17",
+      "field2": "29",
+      "field3": "100490",
+      "field4": "8",
+      "field5": "-6",
+      "field6": "13",
+      "field7": "19"
+    },
+    {
+      "created_at": "2021-06-09T08:22:21Z",
+      "entry_id": 112,
+      "field1": "16",
+      "field2": "28",
+      "field3": "100490",
+      "field4": "9",
+      "field5": "-6",
+      "field6": "13",
+      "field7": "19"
+    },
+    {
+      "created_at": "2021-06-09T08:22:37Z",
+      "entry_id": 113,
+      "field1": "17",
+      "field2": "28",
+      "field3": "100491",
+      "field4": "10",
+      "field5": "-8",
+      "field6": "12",
+      "field7": "18"
+    },
+    {
+      "created_at": "2021-06-09T08:22:52Z",
+      "entry_id": 114,
+      "field1": "17",
+      "field2": "29",
+      "field3": "100491",
+      "field4": "11",
+      "field5": "-8",
+      "field6": "11",
+      "field7": "17"
+    },
+    {
+      "created_at": "2021-06-09T08:23:08Z",
+      "entry_id": 115,
+      "field1": "18",
+      "field2": "28",
+      "field3": "100490",
+      "field4": "12",
+      "field5": "-8",
+      "field6": "10",
+      "field7": "17"
+    },
+    {
+      "created_at": "2021-06-09T08:23:23Z",
+      "entry_id": 116,
+      "field1": "18",
+      "field2": "29",
+      "field3": "100491",
+      "field4": "13",
+      "field5": "-6",
+      "field6": "9",
+      "field7": "18"
+    },
+    {
+      "created_at": "2021-06-09T08:23:39Z",
+      "entry_id": 117,
+      "field1": "18",
+      "field2": "29",
+      "field3": "100491",
+      "field4": "12",
+      "field5": "-5",
+      "field6": "9",
+      "field7": "17"
+    },
+    {
+      "created_at": "2021-06-09T08:23:54Z",
+      "entry_id": 118,
+      "field1": "17",
+      "field2": "29",
+      "field3": "100491",
+      "field4": "11",
+      "field5": "-7",
+      "field6": "10",
+      "field7": "17"
+    },
+    {
+      "created_at": "2021-06-09T08:24:10Z",
+      "entry_id": 119,
+      "field1": "17",
+      "field2": "29",
+      "field3": "100490",
+      "field4": "11",
+      "field5": "-9",
+      "field6": "9",
+      "field7": "16"
+    }
+  ]
+}
