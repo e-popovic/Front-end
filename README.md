@@ -7,7 +7,7 @@ Front-End Highlights
 - Course: Open Computing
 
 
-2021 Farming IoT (IN PROGRESS):
+2021 Farming IoT:
 - Web app for farm-monitoring IoT 
 - Angular, HTML5, CSS3, TypeScript
 - Course: Internet of Things
