@@ -1,0 +1,131 @@
+{
+  "channel": {
+    "id": 1402239,
+    "name": "real_board",
+    "description": "board with real sensors data",
+    "latitude": "45.791964",
+    "longitude": "15.961711",
+    "field1": "temperature_value",
+    "field2": "humidity_value",
+    "field3": "pressure_value",
+    "field4": "leaf_wetness_value",
+    "field5": "soil_moisture_value",
+    "field6": "soil_temperature_value",
+    "field7": "fruit_diameter",
+    "created_at": "2021-05-28T09:48:13Z",
+    "updated_at": "2021-06-08T16:04:55Z",
+    "last_entry_id": 104
+  },
+  "feeds": [
+    {
+      "created_at": "2021-06-09T08:21:08Z",
+      "entry_id": 95,
+      "field1": null,
+      "field2": null,
+      "field3": null,
+      "field4": "0.701",
+      "field5": null,
+      "field6": null,
+      "field7": "0.000"
+    },
+    {
+      "created_at": "2021-06-09T08:21:26Z",
+      "entry_id": 96,
+      "field1": "27.51",
+      "field2": "42.1",
+      "field3": "100085.56",
+      "field4": null,
+      "field5": "-0.25",
+      "field6": "5684.82",
+      "field7": null
+    },
+    {
+      "created_at": "2021-06-09T08:21:44Z",
+      "entry_id": 97,
+      "field1": null,
+      "field2": null,
+      "field3": null,
+      "field4": "0.701",
+      "field5": null,
+      "field6": null,
+      "field7": "0.000"
+    },
+    {
+      "created_at": "2021-06-09T08:22:02Z",
+      "entry_id": 98,
+      "field1": "27.75",
+      "field2": "42.3",
+      "field3": "100080.16",
+      "field4": null,
+      "field5": "-0.36",
+      "field6": "5684.82",
+      "field7": null
+    },
+    {
+      "created_at": "2021-06-09T08:22:20Z",
+      "entry_id": 99,
+      "field1": null,
+      "field2": null,
+      "field3": null,
+      "field4": "0.701",
+      "field5": null,
+      "field6": null,
+      "field7": "0.000"
+    },
+    {
+      "created_at": "2021-06-09T08:22:38Z",
+      "entry_id": 100,
+      "field1": "27.82",
+      "field2": "41.6",
+      "field3": "100086.45",
+      "field4": null,
+      "field5": "-0.36",
+      "field6": "5684.82",
+      "field7": null
+    },
+    {
+      "created_at": "2021-06-09T08:22:56Z",
+      "entry_id": 101,
+      "field1": null,
+      "field2": null,
+      "field3": null,
+      "field4": "0.701",
+      "field5": null,
+      "field6": null,
+      "field7": "0.000"
+    },
+    {
+      "created_at": "2021-06-09T08:23:13Z",
+      "entry_id": 102,
+      "field1": "27.60",
+      "field2": "42.1",
+      "field3": "100090.03",
+      "field4": null,
+      "field5": "-0.36",
+      "field6": "5684.82",
+      "field7": null
+    },
+    {
+      "created_at": "2021-06-09T08:23:31Z",
+      "entry_id": 103,
+      "field1": null,
+      "field2": null,
+      "field3": null,
+      "field4": "0.701",
+      "field5": null,
+      "field6": null,
+      "field7": "0.000"
+    },
+    {
+      "created_at": "2021-06-09T08:23:49Z",
+      "entry_id": 104,
+      "field1": "27.55",
+      "field2": "42.2",
+      "field3": "100083.98",
+      "field4": null,
+      "field5": "-0.25",
+      "field6": "5684.82",
+      "field7": null
+    }
+  ]
+}
