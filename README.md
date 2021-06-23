@@ -7,7 +7,7 @@ Front-End Highlights
 - University course front-end oriented project
 
 
-2021 Farming IoT (IN PROGRESS):
+2021 Farming IoT:
 - Web app for farm-monitoring IoT 
 - Angular, HTML5, CSS3, TypeScript
 - Course: Internet of Things
